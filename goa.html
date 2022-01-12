@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>goa </title>
+	
+</head>
+<header style="background-color:blue; padding: 20px; color: #fff;">
+    <div class="wrapper">
+      <div class="sidebar-header">
+          <h1>GOA PINDUL</h1>
+      </div>
+</header>
+<br><br>
+<body style="background-image: url(pantai.jpg);">
+<body>
+	<div class="container">
+		<h2>GOA PINDUL</h2>
+	<center>	<h3>Rp.100.000</h3> </center>
+		<table border="1">
+			<tr>
+				<th>WISATA</th>
+				<th>HARGA</th>
+			
+			</tr>
+
+			<tr>
+				<th>GOA PINDUL</th>
+				<th><input type="text" name="harga" id="pantai" size="7" value="100000" readonly></th>
+			</tr>
+			<tr>
+				<th> PENGUNJUNG</th>
+				<th><input type="number" name="jumlah_tiket" id="harga_tiket" size="7" value="0" onchange="total()"></th>
+			</tr>
+            <tr>
+                <th>BAYAR</th>
+				<th><input type="text" name="bayar" id="bayar" ></th>
+
+            </tr>
+			<tr>
+				<th>KEMBALIAN</th>
+				<th><input type="text" name="kembalian" id="kembalian" ></th>
+			</tr>
+		
+
+			<tr>
+				
+				<th colspan="3">jumlah total</th>
+				<th><input type="text" name="total_jumlah" id="total" size="7" value="" readonly></th>
+			</tr>
+		</table>
+		<br><br>
+	
+
+		<script type="text/javascript">
+		function total() {
+		var tiketpantai = 100000 * parseInt(document.getElementById('harga_tiket').value);
+		var pembayaran = parseInt(document.getElementById('bayar').value);
+		var kembalian = pembayaran - tiketpantai ;
+		var jumlahs = tiketpantai - bayar ;
+		var jumlah_harga = tiketpantai ;
+        var kembalian;
+	    document.getElementById('total').value = jumlah_harga;
+        document.getElementById('kembalian').value = kembalian;
+        }
+		
+		
+		
+		
+		</script>
+	</div>
+
+	<style>
+		.container{
+			width:650px;
+			margin: auto;
+			border: 1px dotted;
+			padding: 10px;
+			background-color: white;
+			color:black;
+		}
+
+		h2{
+			text-align: center;
+			text-decoration: underline;
+
+
+		}
+
+		table{
+			background: white;
+			margin:auto;
+
+		}
+
+		td{
+			padding: 10px
+		}
+	</style>
+</body>
+</html>
